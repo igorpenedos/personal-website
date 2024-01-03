@@ -28,10 +28,10 @@ export const Project = (props: Props) => {
         <div className="rounded-full text-white transition-all ease-in-out duration-1000 w-fit font-bold text-2xl lg:text-base xl:text-2xl drop-shadow">
           {name}
         </div>
-        <div className="md:h-0 md:opacity-0 h-full opacity-100 group-hover:h-full group-hover:opacity-100 transition-all ease-in-out duration-500 overflow-hidden flex flex-row flex-wrap mt-2 gap-2 font-semibold text-sm md:text-xs lg:text-sm">
+        <div className="md:h-0 md:opacity-0 h-full opacity-100 group-hover:h-full group-hover:opacity-100 transition-all ease-in-out duration-500 overflow-hidden flex flex-row flex-wrap mt-2 gap-2 font-semibold text-sm md:text-xs lg:text-base">
           {languages.map((language) => (
             <div
-              className="bg-white text-blue-900 px-2 rounded-full"
+              className="bg-white text-blue-900 px-2 lg:px-3 rounded-full"
               key={language}
             >
               {language}

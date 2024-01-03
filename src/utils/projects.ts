@@ -43,4 +43,11 @@ export const projects: Project[] = [
     photos: ["password_manager.png"],
     link: "https://github.com/igorpenedos/password-manager",
   },
+  {
+    name: "Create File Templates",
+    languages: ["Typescript", "VS Extension"],
+    points: [],
+    photos: ["vs.jpg"],
+    link: "https://github.com/igorpenedos/create-file-template",
+  },
 ];
