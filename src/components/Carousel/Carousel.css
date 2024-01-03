@@ -1,0 +1,11 @@
+.pause:hover {
+    animation-play-state: paused;
+}
+
+.outer-left{
+    background: linear-gradient(to left, transparent 0%, #F0E0C8 100%)
+}
+
+.outer-right {
+    background: linear-gradient(to right, transparent 0%,#F0E0C8 100%);;
+}
