@@ -15,7 +15,7 @@ export const projects: Project[] = [
       "The project uses React for the front end and Golang with the Gin framework to handle the backend communications with Mongo.DB collections.",
       "Developed endpoints to ensure students can graduate with enrolled courses while helping the front end implement a responsive design that can reflect the backend functionalities.",
     ],
-    photos: ["tmu_prep_logo.png", "tmu_prep.png", "tmu_prep_1.png"],
+    photos: ["prep.jpg", "tmu_prep.png", "tmu_prep_1.png", "tmu_prep_logo.png"],
     link: "https://github.com/maryam-elbeshbishy/TMUPrep",
   },
   {
@@ -28,5 +28,19 @@ export const projects: Project[] = [
     ],
     photos: ["csa.png"],
     link: "https://github.com/igorpenedos/customer-service-application",
+  },
+  {
+    name: "File Share",
+    languages: ["React", "Express.JS", "Socket.IO"],
+    points: [],
+    photos: ["share.jpg", "file_share.png"],
+    link: "https://github.com/igorpenedos/file-share",
+  },
+  {
+    name: "Password Manager",
+    languages: ["Python", "SQLite3"],
+    points: [],
+    photos: ["password_manager.png"],
+    link: "https://github.com/igorpenedos/password-manager",
   },
 ];

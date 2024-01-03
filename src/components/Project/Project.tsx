@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import { Carousel } from "../Carousel/Carousel";
-import { Button } from "../Button/Button";
-import { FaGithub } from "react-icons/fa";
+import React from "react";
+import "./Project.css";
 
 interface Props {
   name: string;
@@ -12,37 +10,35 @@ interface Props {
 }
 
 export const Project = (props: Props) => {
-  const { name, languages, points, photos, link } = props;
-  const [imageIndex, setImageIndex] = useState(0);
+  const { name, languages, photos, link } = props;
 
   return (
-    <div className="flex flex-col gap-2">
-      <div className="text-4xl font-semibold">{name}</div>
-      <div className="flex flex-row flex-wrap gap-2">
-        {languages.map((language) => (
-          <div
-            className="bg-white text-blue-900 px-2 rounded-full"
-            key={language}
-          >
-            {language}
-          </div>
-        ))}
-      </div>
-      <div className="my-2">
-        <Button
-          text="Github"
-          link={link}
-          bgColor="gray-600"
-          icon={<FaGithub size="24px" />}
-        />
-      </div>
-      <div>
-        <ul className="list-disc pl-8">
-          {points.map((point, index) => (
-            <li key={index}>{point}</li>
+    <a
+      className="relative flex flex-1 drop-shadow-xl group w-full h-min border-2 border-blue-900 rounded-xl"
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+    >
+      <img
+        src={`./assets/${photos[0]}`}
+        alt={name}
+        className="w-full h-auto rounded-xl"
+      />
+      <div className="absolute bottom-0 left-0 w-full pl-2 pb-2 pt-6 bg-gradient-to-t from-gray-600 from-5% to-transparent rounded-b-xl">
+        <div className="rounded-full text-white transition-all ease-in-out duration-1000 w-fit font-bold text-2xl lg:text-base xl:text-2xl drop-shadow">
+          {name}
+        </div>
+        <div className="md:h-0 md:opacity-0 h-full opacity-100 group-hover:h-full group-hover:opacity-100 transition-all ease-in-out duration-500 overflow-hidden flex flex-row flex-wrap mt-2 gap-2 font-semibold text-sm md:text-xs lg:text-sm">
+          {languages.map((language) => (
+            <div
+              className="bg-white text-blue-900 px-2 rounded-full"
+              key={language}
+            >
+              {language}
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
-    </div>
+    </a>
   );
 };

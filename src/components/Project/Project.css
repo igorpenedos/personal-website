@@ -1,0 +1,7 @@
+.text-vertical {
+    writing-mode: vertical-lr;
+}
+
+.main:hover > .text-vertical {
+    writing-mode: horizontal-tb;
+}

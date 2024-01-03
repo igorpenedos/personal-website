@@ -37,7 +37,7 @@ export const Intro = () => {
           />
         </div>
       </div>
-      <div className="mt-12">
+      {/* <div className="mt-12">
         <div className="text-4xl font-semibold text-orange-600 drop-shadow flex justify-center text-center">
           About Me
         </div>
@@ -49,7 +49,7 @@ export const Intro = () => {
           commodi. Fugit tempore dignissimos numquam temporibus, quisquam
           cupiditate vero laudantium labore optio, vitae, alias quia vel velit.
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
