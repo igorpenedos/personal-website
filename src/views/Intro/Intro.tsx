@@ -13,7 +13,7 @@ export const Intro = () => {
       </div>
       <div className="flex flex-col text-center md:text-start mt-12 md:mt-24 text-xl font-semibold">
         <div>Software Developer</div>
-        <div className="group flex flex-row w-fit transition-all ease-in-out duration-1000 hover:gap-1.5">
+        <div className="group flex flex-row w-full justify-center md:justify-start transition-all ease-in-out duration-1000 hover:gap-1.5">
           <div className="flex flex-row w-auto overflow-hidden">
             <div className="bg-background">T</div>
             <div className="-translate-x-full group-hover:translate-x-0 max-w-0 group-hover:max-w-none w-0 group-hover:w-[63.33px] overflow-hidden transition-all ease-in-out duration-1000 -z-10">
