@@ -11,7 +11,7 @@ export const Intro = () => {
       <div className="text-6xl md:text-7xl w-100 text-center font-semibold">
         <div className="drop-shadow-lg">Igor Goncalves Penedos</div>
       </div>
-      <div className="flex flex-col text-center md:text-start mt-12 md:mt-24 text-xl font-semibold ">
+      <div className="flex flex-col text-center md:text-start mt-12 md:mt-24 text-xl font-semibold">
         <div>Software Developer</div>
         <div className="group flex flex-row w-fit transition-all ease-in-out duration-1000 hover:gap-1.5">
           <div className="flex flex-row w-auto overflow-hidden">
