@@ -9,10 +9,10 @@ interface Props {
 }
 
 export const Carousel = (props: Props) => {
-  const { children, gap, autoSlide, height } = props;
+  const { children, gap, autoSlide } = props;
 
   return (
-    <div className={`relative overflow-x-hidden h-${height ?? "full"} w-full`}>
+    <div className="relative overflow-x-hidden h-14 w-full">
       <div className="absolute top-0 left-0 w-[100px] h-full z-10 outer-left"></div>
       <div className="absolute top-0 right-0 w-[100px] h-full z-10 outer-right"></div>
       <div

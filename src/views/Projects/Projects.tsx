@@ -15,6 +15,7 @@ export const Projects = () => {
               <Project
                 name={project?.name}
                 languages={project?.languages}
+                description={project?.description}
                 points={project?.points}
                 photos={project?.photos}
                 link={project?.link}
@@ -31,6 +32,7 @@ export const Projects = () => {
               <Project
                 name={project?.name}
                 languages={project?.languages}
+                description={project?.description}
                 points={project?.points}
                 photos={project?.photos}
                 link={project?.link}
@@ -47,6 +49,7 @@ export const Projects = () => {
           <Project
             name={project?.name}
             languages={project?.languages}
+            description={project?.description}
             points={project?.points}
             photos={project?.photos}
             link={project?.link}

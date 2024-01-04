@@ -1,6 +1,7 @@
 export interface Project {
   name: string;
   languages: string[];
+  description: string;
   points: string[];
   photos: string[];
   link?: string;
@@ -10,6 +11,8 @@ export const projects: Project[] = [
   {
     name: "TMU Prep",
     languages: ["React", "ChakraUI", "CSS", "Golang", "Gin", "MongoDB"],
+    description:
+      "Application that assits student organize their academic schedule and ensure graduation",
     points: [
       "Collaborated with a group of 12 in an agile environment to build a web application that empowers CS students to visualize and organize their classes and check their graduation status.",
       "The project uses React for the front end and Golang with the Gin framework to handle the backend communications with Mongo.DB collections.",
@@ -21,24 +24,30 @@ export const projects: Project[] = [
   {
     name: "Customer Service Application",
     languages: ["React", "NodeJS", "ExpressJS", "MongoDB"],
+    description:
+      "Ecommerce with mock data that simulates a true business experience",
     points: [
       "Created the backend for a mock e-commerce web application that enables customers to purchase items and get all the necessary information about their orders.",
       "The NodeJS and ExpressJS backend communicates with the MongoDB collections to schedule drivers and calculate distances to customer addresses.",
       "Implemented secure password handling for customer accounts.",
     ],
-    photos: ["csa.png"],
+    photos: ["ecom.png", "ecom.jpg", "csa.png"],
     link: "https://github.com/igorpenedos/customer-service-application",
   },
   {
     name: "File Share",
     languages: ["React", "Express.JS", "Socket.IO"],
+    description:
+      "Socket.io project that allows users to share files through a socket connection",
     points: [],
-    photos: ["share.jpg", "file_share.png"],
+    photos: ["share.png", "share.jpg", "file_share.png"],
     link: "https://github.com/igorpenedos/file-share",
   },
   {
     name: "Password Manager",
     languages: ["Python", "SQLite3"],
+    description:
+      "A python password manager that uses a local database to store password through hashing",
     points: [],
     photos: ["password_manager.png"],
     link: "https://github.com/igorpenedos/password-manager",
@@ -46,6 +55,8 @@ export const projects: Project[] = [
   {
     name: "Create File Templates",
     languages: ["Typescript", "VS Extension"],
+    description:
+      "VS Code extension to have defualt templates when you create certain files",
     points: [],
     photos: ["vs.jpg"],
     link: "https://github.com/igorpenedos/create-file-template",

@@ -13,7 +13,26 @@ export const Intro = () => {
       </div>
       <div className="flex flex-col text-center md:text-start mt-12 md:mt-24 text-xl font-semibold ">
         <div>Software Developer</div>
-        <div>TMU</div>
+        <div className="group flex flex-row w-fit transition-all ease-in-out duration-1000 hover:gap-1.5">
+          <div className="flex flex-row w-auto overflow-hidden">
+            <div className="bg-background">T</div>
+            <div className="-translate-x-full group-hover:translate-x-0 max-w-0 group-hover:max-w-none w-0 group-hover:w-[63.33px] overflow-hidden transition-all ease-in-out duration-1000 -z-10">
+              oronto
+            </div>
+          </div>
+          <div className="flex flex-row w-auto overflow-hidden">
+            <div className="bg-background">M</div>
+            <div className="-translate-x-full group-hover:translate-x-0 max-w-0 group-hover:max-w-none w-0 group-hover:w-[103.89px] overflow-hidden transition-all ease-in-out duration-1000 -z-10">
+              etropolitan
+            </div>
+          </div>
+          <div className="flex flex-row w-auto overflow-hidden">
+            <div className="bg-background">U</div>
+            <div className="-translate-x-full group-hover:translate-x-0 max-w-0 group-hover:max-w-none w-0 group-hover:w-[80.81px] overflow-hidden transition-all ease-in-out duration-1000 -z-10">
+              niversity
+            </div>
+          </div>
+        </div>
         <div>Toronto, ON</div>
         <div className="flex flex-row justify-center md:justify-start mt-6 gap-2 font-normal">
           <Icon href={links.github} openOnNewTab toolTip toolTipText="Github">
@@ -29,12 +48,7 @@ export const Intro = () => {
           </Icon>
         </div>
         <div className="flex mt-6 font-normal justify-center md:justify-start">
-          <Button
-            text="Resume"
-            bgColor="blue-900"
-            textColor="white"
-            link="/IgorGoncalvesPenedos_Resume.pdf"
-          />
+          <Button text="Resume" link="/IgorGoncalvesPenedos_Resume.pdf" />
         </div>
       </div>
       {/* <div className="mt-12">
