@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { navbarContent } from "../../utils/navbar";
 import { links } from "../../utils/link";
 import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { Icon } from "../Icon/Icon";
 
-export const Navbar = () => {
-  const [open, setOpen] = useState<boolean>(false);
+interface Props {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+}
+
+export const Navbar = (props: Props) => {
+  const { open, setOpen } = props;
 
   return (
     <div>
@@ -31,66 +36,68 @@ export const Navbar = () => {
           </Icon>
         </div>
       </div>
-      <button className="flex md:hidden sticky w-98 top-0 text-2xl mt-5 ml-5 font-semibold z-10 group">
-        <div className="relative">
-          <div
-            className="flex bg-orange-600 rounded-full w-[48px] h-[48px] justify-center"
-            onClick={() => {
-              setOpen(!open);
-            }}
-          >
-            <div className="flex flex-col gap-1 justify-center">
-              <div
-                className={`flex bg-yellow-100 w-[25px] h-1 duration-500 ${
-                  open ? "rotate-45 translate-y-full" : ""
-                }`}
-              ></div>
-              <div
-                className={`flex bg-yellow-100 w-[25px] duration-500 h-1 ${
-                  open ? "hidden" : ""
-                }`}
-              ></div>
-              <div
-                className={`flex bg-yellow-100 w-[25px] h-1 duration-500 ${
-                  open ? "-rotate-45 -translate-y-full" : ""
-                }`}
-              ></div>
-            </div>
-          </div>
-          {open ? (
+      <div className="flex md:hidden w-full justify-end pr-5 pt-5 text-2xl font-semibold z-10">
+        <div
+          className={`flex ${
+            open ? "bg-black" : "bg-orange-600"
+          } rounded-full w-[48px] h-[48px] justify-center z-20`}
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
+          <div className="flex flex-col gap-1 justify-center">
             <div
-              className="flex absolute flex-col bg-white h-100 top-0 left-12 shadow"
-              onClick={() => {
-                setOpen(!open);
-              }}
-            >
-              {navbarContent.map((content) => (
-                <a
-                  href={content.href}
-                  key={content.name}
-                  className="hover:drop-shadow hover:bg-gray-200 w-full h-full px-4 py-2"
-                >
-                  {content.name}
-                </a>
-              ))}
-              <a
-                href={links.github}
-                className="hover:drop-shadow hover:bg-gray-200 w-full h-full px-4 py-2"
-              >
-                Github
-              </a>
-              <a
-                href={links.linkedin}
-                className="hover:drop-shadow hover:bg-gray-200 w-full h-full px-4 py-2"
-              >
-                Linkedin
-              </a>
-            </div>
-          ) : (
-            <></>
-          )}
+              className={`flex bg-yellow-100 w-[25px] h-1 duration-1000 ${
+                open ? "rotate-45 translate-y-full" : ""
+              }`}
+            ></div>
+            <div
+              className={`flex bg-yellow-100 w-[25px] duration-1000 h-1 ${
+                open ? "hidden" : ""
+              }`}
+            ></div>
+            <div
+              className={`flex bg-yellow-100 w-[25px] h-1 duration-1000 ${
+                open ? "-rotate-45 -translate-y-full" : ""
+              }`}
+            ></div>
+          </div>
         </div>
-      </button>
+        <div
+          className={`flex absolute flex-col text-center bg-black text-background h-screen w-screen pt-[64px] top-0 left-0 right-0 bottom-0 z-10 ${
+            open ? "translate-x-0" : "translate-x-full"
+          } transition-all ease-in-out duration-500`}
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
+          {navbarContent.map((content) => (
+            <a
+              href={content.href}
+              key={content.name}
+              className="hover:drop-shadow hover:bg-gray-900 w-full h-full px-4 py-2 flex justify-center items-center"
+            >
+              {content.name}
+            </a>
+          ))}
+          <a
+            href={links.github}
+            className="hover:drop-shadow hover:bg-gray-900 w-full h-full px-4 py-2 flex justify-center items-center"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Github
+          </a>
+          <a
+            href={links.linkedin}
+            className="hover:drop-shadow hover:bg-gray-900 w-full h-full px-4 py-2 flex justify-center items-center"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Linkedin
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

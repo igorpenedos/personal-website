@@ -7,28 +7,28 @@ import { AiFillLinkedin } from "react-icons/ai";
 
 export const Intro = () => {
   return (
-    <div className="mt-16 md:mt-32 flex flex-col" id="about">
+    <div className="mt-[132px] md:mt-32 flex flex-col" id="about">
       <div className="text-6xl md:text-7xl w-100 text-center font-semibold">
         <div className="drop-shadow-lg">Igor Goncalves Penedos</div>
       </div>
       <div className="flex flex-col text-center md:text-start mt-12 md:mt-24 text-xl font-semibold">
         <div>Software Developer</div>
-        <div className="group flex flex-row w-full justify-center md:justify-start transition-all ease-in-out duration-1000 hover:gap-1.5">
+        <div className="group flex flex-row w-full justify-center md:justify-start transition-all ease-in-out duration-1000 md:hover:gap-1.5">
           <div className="flex flex-row w-auto overflow-hidden">
             <div className="bg-background">T</div>
-            <div className="-translate-x-full group-hover:translate-x-0 max-w-0 group-hover:max-w-none w-0 group-hover:w-[63.33px] overflow-hidden transition-all ease-in-out duration-1000 -z-10">
+            <div className="hidden md:block -translate-x-full group-hover:translate-x-0 max-w-0 group-hover:max-w-none w-0 group-hover:w-[63.33px] overflow-hidden transition-all ease-in-out duration-1000 -z-10">
               oronto
             </div>
           </div>
           <div className="flex flex-row w-auto overflow-hidden">
             <div className="bg-background">M</div>
-            <div className="-translate-x-full group-hover:translate-x-0 max-w-0 group-hover:max-w-none w-0 group-hover:w-[103.89px] overflow-hidden transition-all ease-in-out duration-1000 -z-10">
+            <div className="hidden md:block -translate-x-full group-hover:translate-x-0 max-w-0 group-hover:max-w-none w-0 group-hover:w-[103.89px] overflow-hidden transition-all ease-in-out duration-1000 -z-10">
               etropolitan
             </div>
           </div>
           <div className="flex flex-row w-auto overflow-hidden">
             <div className="bg-background">U</div>
-            <div className="-translate-x-full group-hover:translate-x-0 max-w-0 group-hover:max-w-none w-0 group-hover:w-[80.81px] overflow-hidden transition-all ease-in-out duration-1000 -z-10">
+            <div className="hidden md:block -translate-x-full group-hover:translate-x-0 max-w-0 group-hover:max-w-none w-0 group-hover:w-[80.81px] overflow-hidden transition-all ease-in-out duration-1000 -z-10">
               niversity
             </div>
           </div>

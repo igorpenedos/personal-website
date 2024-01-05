@@ -23,13 +23,13 @@ export const Project = (props: Props) => {
       <img
         src={`./assets/${photos[0]}`}
         alt={name}
-        className="w-full h-auto group-hover:blur-sm"
+        className="w-full h-auto md:group-hover:blur-sm transition-all ease-[cubic-bezier(.9,.19,.32,.89)] duration-500"
       />
-      <div className="absolute bottom-0 left-0 w-full px-2 pb-2 pt-4 bg-gradient-to-t from-gray-600 from-5% to-transparent transition-all ease-in-out duration-500">
-        <div className="text-white transition-all ease-in-out duration-500 w-fit font-bold text-2xl lg:text-base xl:text-2xl drop-shadow">
+      <div className="absolute bottom-0 left-0 w-full px-2 pb-2 pt-4 bg-gradient-to-t from-gray-600 from-5% to-transparent transition-all ease-[cubic-bezier(.9,.19,.32,.89)] duration-500">
+        <div className="text-white transition-all ease-[cubic-bezier(.9,.19,.32,.89)] duration-500 w-fit font-bold text-2xl lg:text-base xl:text-2xl drop-shadow">
           {name}
         </div>
-        <div className="md:max-h-0 md:translate-y-full md:opacity-0 max-h-none translate-y-0 opacity-100 group-hover:max-h-96 group-hover:translate-y-0 group-hover:opacity-100 transition-all ease-in-out duration-1000 overflow-hidden flex flex-row flex-wrap mt-2 gap-2 font-semibold">
+        <div className="md:max-h-0 md:translate-y-full md:opacity-0 max-h-none translate-y-0 opacity-100 group-hover:max-h-96 group-hover:translate-y-0 group-hover:opacity-100 transition-all ease-[cubic-bezier(.9,.19,.32,.89)] duration-1000 overflow-hidden flex flex-row flex-wrap mt-2 gap-2 font-semibold">
           <div className="text-white text-sm font-normal">{description}</div>
           {languages.map((language) => (
             <div
