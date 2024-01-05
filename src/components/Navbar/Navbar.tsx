@@ -40,7 +40,7 @@ export const Navbar = (props: Props) => {
         <div
           className={`flex ${
             open ? "bg-black" : "bg-orange-600"
-          } rounded-full w-[48px] h-[48px] justify-center z-20`}
+          } rounded-full w-[48px] h-[48px] justify-center z-20 cursor-pointer`}
           onClick={() => {
             setOpen(!open);
           }}

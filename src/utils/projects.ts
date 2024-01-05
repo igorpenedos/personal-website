@@ -12,7 +12,7 @@ export const projects: Project[] = [
     name: "TMU Prep",
     languages: ["React", "ChakraUI", "CSS", "Golang", "Gin", "MongoDB"],
     description:
-      "Application that assits student organize their academic schedule and ensure graduation",
+      "Application that assits students organizing their academic schedule and ensure graduation",
     points: [
       "Collaborated with a group of 12 in an agile environment to build a web application that empowers CS students to visualize and organize their classes and check their graduation status.",
       "The project uses React for the front end and Golang with the Gin framework to handle the backend communications with Mongo.DB collections.",

@@ -14,7 +14,7 @@ export const experiences: Experiences[] = [
     endDate: "August 2023",
     location: "Montreal, QC",
     points: [
-      "Worked with major clients to improved search relevance and user experience by developing tailored enterprise search solutions, for example LG and Metro.",
+      "Worked with major clients to improve search relevance and user experience by developing tailored enterprise search solutions, for example LG and Metro.",
       "Implemented a deployment pipeline for internal tools that speed up deployment by 90%.",
       "Worked across multiple projects, concurrently, dealing with different technologies while maintaining internal tools.",
     ],
