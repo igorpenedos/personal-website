@@ -9,7 +9,7 @@ export const navbarContent: NavbarContent[] = [
     href: "#about",
   },
   {
-    name: "Experience",
+    name: "Experiences",
     href: "#experiences",
   },
   {
