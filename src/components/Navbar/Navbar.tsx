@@ -47,17 +47,17 @@ export const Navbar = (props: Props) => {
         >
           <div className="flex flex-col gap-1 justify-center">
             <div
-              className={`flex bg-yellow-100 w-[25px] h-1 duration-1000 ${
+              className={`flex bg-yellow-100 w-[25px] h-1 duration-500 ${
                 open ? "rotate-45 translate-y-full" : ""
               }`}
             ></div>
             <div
-              className={`flex bg-yellow-100 w-[25px] duration-1000 h-1 ${
+              className={`flex bg-yellow-100 w-[25px] duration-500 h-1 ${
                 open ? "hidden" : ""
               }`}
             ></div>
             <div
-              className={`flex bg-yellow-100 w-[25px] h-1 duration-1000 ${
+              className={`flex bg-yellow-100 w-[25px] h-1 duration-500 ${
                 open ? "-rotate-45 -translate-y-full" : ""
               }`}
             ></div>
