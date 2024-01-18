@@ -65,16 +65,28 @@ export const Projects = () => {
         </div>
       </div>
       <div className="flex lg:hidden flex-col gap-4 w-full mt-6">
-        {projects.map((project) => (
-          <Project
-            name={project?.name}
-            languages={project?.languages}
-            description={project?.description}
-            points={project?.points}
-            photos={project?.photos}
-            link={project?.link}
-            key={project?.name}
-          />
+        {projects.map((project, index) => (
+          <div
+            className={
+              index % 2
+                ? animate
+                  ? "opacity-100 animate-slide-in-right"
+                  : "opacity-0"
+                : animate
+                ? "opacity-100 animate-slide-in-left"
+                : "opacity-0"
+            }
+          >
+            <Project
+              name={project?.name}
+              languages={project?.languages}
+              description={project?.description}
+              points={project?.points}
+              photos={project?.photos}
+              link={project?.link}
+              key={project?.name}
+            />
+          </div>
         ))}
       </div>
     </div>
