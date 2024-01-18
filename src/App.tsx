@@ -11,7 +11,11 @@ function App() {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <div className={`relative ${open ? "h-screen overflow-hidden" : "overflow-x-hidden"}`}>
+    <div
+      className={`relative ${
+        open ? "h-screen overflow-hidden" : "overflow-x-hidden"
+      }`}
+    >
       <Navbar open={open} setOpen={setOpen} />
       <div className="flex justify-center">
         <div className="w-80 md:w-1/2">

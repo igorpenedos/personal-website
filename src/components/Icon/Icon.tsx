@@ -11,7 +11,7 @@ interface Props {
 export const Icon = (props: Props) => {
   const { children, toolTip, toolTipText, openOnNewTab, href } = props;
   return (
-    <div className="group relative">
+    <div className="group relative hover:text-quaternary">
       {href ? (
         <a href={href} target={openOnNewTab ? "_blank" : ""} rel="noreferrer">
           {children}

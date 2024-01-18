@@ -16,9 +16,19 @@ export const Navbar = (props: Props) => {
   return (
     <div>
       <div className="hidden md:flex sticky w-98 top-0 flex-row justify-center text-2xl gap-10 my-2 font-semibold">
-        <div className="absolute left-5 flex text-orange-600">IP</div>
+        <div className="absolute left-5 flex bg-primary rounded-xl">
+          <img
+            src={"/assets/logo.svg"}
+            alt="Logo"
+            className="h-8 w-8 scale-75"
+          />
+        </div>
         {navbarContent.map((content) => (
-          <a href={content.href} className="hover:underline" key={content.name}>
+          <a
+            href={content.href}
+            className="hover:underline hover:decoration-quaternary"
+            key={content.name}
+          >
             {content.name}
           </a>
         ))}
@@ -39,7 +49,7 @@ export const Navbar = (props: Props) => {
       <div className="flex md:hidden w-full justify-end pr-5 pt-5 text-2xl font-semibold z-10">
         <div
           className={`flex ${
-            open ? "bg-black" : "bg-orange-600"
+            open ? "bg-background" : "bg-primary"
           } rounded-full w-[48px] h-[48px] justify-center z-20 cursor-pointer`}
           onClick={() => {
             setOpen(!open);
@@ -47,24 +57,24 @@ export const Navbar = (props: Props) => {
         >
           <div className="flex flex-col gap-1 justify-center">
             <div
-              className={`flex bg-yellow-100 w-[25px] h-1 duration-500 ${
+              className={`flex bg-quaternary w-[25px] h-1 duration-500 ${
                 open ? "rotate-45 translate-y-full" : ""
               }`}
             ></div>
             <div
-              className={`flex bg-yellow-100 w-[25px] duration-500 h-1 ${
+              className={`flex bg-quaternary w-[25px] duration-500 h-1 ${
                 open ? "hidden" : ""
               }`}
             ></div>
             <div
-              className={`flex bg-yellow-100 w-[25px] h-1 duration-500 ${
+              className={`flex bg-quaternary w-[25px] h-1 duration-500 ${
                 open ? "-rotate-45 -translate-y-full" : ""
               }`}
             ></div>
           </div>
         </div>
         <div
-          className={`flex absolute flex-col text-center bg-black text-background h-screen w-screen pt-[64px] top-0 left-0 right-0 bottom-0 z-10 ${
+          className={`flex absolute flex-col text-center bg-background text-primary h-screen w-screen pt-[64px] top-0 left-0 right-0 bottom-0 z-10 ${
             open ? "translate-x-0" : "translate-x-full"
           } transition-all ease-in-out duration-500`}
           onClick={() => {

@@ -30,7 +30,7 @@ export const Skill = (props: Props) => {
   const { name } = props;
 
   return (
-    <div className="text-gray-600 hover:text-inherit">
+    <div className="text-secondary hover:text-quaternary">
       {/* <div>{name}</div> */}
       <Icon href={""} toolTip={true} toolTipText={name} openOnNewTab={false}>
         {(() => {

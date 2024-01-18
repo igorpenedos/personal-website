@@ -1,15 +1,31 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Project } from "../../components/Project/Project";
 import { projects } from "../../utils/projects";
+import { Title } from "../../components/Title/Title";
 
 export const Projects = () => {
+  const targetRef = useRef<HTMLDivElement>(null);
+  const [animate, setAnimate] = useState<boolean>(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setAnimate(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(targetRef.current!);
+  }, []);
+
   return (
-    <div className="mt-12" id="projects">
-      <div className="text-orange-600 text-4xl font-semibold drop-shadow justify-center flex text-center">
-        Projects
-      </div>
+    <div className="mt-12" id="projects" ref={targetRef}>
+      <Title text="Projects" />
       <div className="hidden lg:flex flex-row gap-4">
-        <div className="flex flex-col gap-4 w-full mt-6 h-fit">
+        <div
+          className={`flex flex-col gap-4 w-full mt-6 h-fit ${
+            animate ? "opacity-100 animate-slide-in-left" : " opacity-0"
+          }`}
+        >
           {projects.map((project, index) =>
             !(index % 2) ? (
               <Project
@@ -26,7 +42,11 @@ export const Projects = () => {
             )
           )}
         </div>
-        <div className="flex flex-col gap-4 w-full mt-6 h-fit">
+        <div
+          className={`flex flex-col gap-4 w-full mt-6 h-fit ${
+            animate ? "opacity-100 animate-slide-in-right" : "opacity-0"
+          }`}
+        >
           {projects.map((project, index) =>
             index % 2 ? (
               <Project
