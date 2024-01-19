@@ -22,7 +22,7 @@ export const Experiences = () => {
       <Title text="Professional Journey" />
       <div
         className={`relative duration-1000 ${
-          animate ? "animate-slide-in-bottom opacity-100" : "opacity-0"
+          animate ? "scale-100 opacity-100" : " scale-50 opacity-0"
         }`}
       >
         <div className="absolute left-[20px]  border-l-2 border-tertiary border-dashed h-full"></div>

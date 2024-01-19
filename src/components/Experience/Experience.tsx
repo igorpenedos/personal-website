@@ -35,18 +35,12 @@ export const Experience = (props: Props) => {
         <div>{position}</div>
         <div>{location}</div>
         <div
-          className="flex flex-row gap-2 cursor-pointer"
+          className="flex flex-row gap-2 cursor-pointer w-fit bg-quaternary py-1 px-2 rounded-full text-sm mt-2 text-white"
           onClick={() => {
             setOpen(!open);
           }}
         >
-          <div
-            className={`transition-all ease-in-out duration-500 ${
-              open ? "rotate-90" : "rotation-0"
-            }`}
-          >
-            &gt;
-          </div>
+          
           Click for {open ? "less" : "more"} info
         </div>
       </div>
@@ -55,7 +49,7 @@ export const Experience = (props: Props) => {
           open ? "max-h-96" : "max-h-0"
         } flex transition-all duration-500 ease-in-out -z-10`}
       >
-        <ul className="flex flex-col list-disc gap-2 ml-12 mt-2 text-secondary">
+        <ul className="flex flex-col list-disc gap-2 ml-12 mt-2 text-base text-secondary">
           {points.map((point, index) => (
             <li key={index}>{point}</li>
           ))}
