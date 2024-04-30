@@ -19,7 +19,7 @@ export const experiences: Experiences[] = [
       "Implemented a deployment pipeline for internal tools that speed up deployment by 90%.",
       "Worked across multiple projects, concurrently, dealing with different technologies while maintaining internal tools.",
     ],
-    logo: "https://media.licdn.com/dms/image/C4D0BAQE18zr9PmoTiQ/company-logo_200_200/0/1630467656068/coveo_logo?e=1712793600&v=beta&t=RnzNmuu7lxEttL39flIgs-EWnjI098FXma7cGY-ny_I",
+    logo: "coveo_logo.jpg",
   },
   {
     company: "Flybits",
@@ -33,7 +33,7 @@ export const experiences: Experiences[] = [
       "Collaborated with backend engineers to ensure an effortless implementation of API calls.",
       "Communicated with UX/UI team to achieve the intended design, with focus on responsiveness.",
     ],
-    logo: "https://media.licdn.com/dms/image/D560BAQF2dSCFlGK_JA/company-logo_200_200/0/1688485061982/flybits_logo?e=1712793600&v=beta&t=_mK7ybzWuBWXMdoQshQK6FdEN5_aQd9gGHvn7Bdv5dY",
+    logo: "flybits_logo.jpg",
   },
   {
     company: "GetQuorum",
@@ -46,7 +46,7 @@ export const experiences: Experiences[] = [
       "Worked on REST API endpoints to provide new features to the users’ workflow.",
       "Operated within an agile environment and regularly performed demos to keep the team updated.",
     ],
-    logo: "https://media.licdn.com/dms/image/D4D0BAQFDvFhiXu6jNw/company-logo_200_200/0/1689190733446/getquorum_logo?e=1712793600&v=beta&t=WveIViMWMGLpnVFqMvP8XtuV2-3ZhIB2lCN89c2ZGjo",
+    logo: "getquorum_logo.jpg",
   },
   {
     company: "Interac Corporation",
@@ -60,6 +60,6 @@ export const experiences: Experiences[] = [
       "Documented Java API endpoints using OpenAPI.",
       "Gained an understanding how to develop a large project with security and scalability as a priority.",
     ],
-    logo: "https://media.licdn.com/dms/image/D560BAQF-kf2JClu8sw/company-logo_200_200/0/1693571882350/interac_corp_logo?e=1712793600&v=beta&t=eIMIESVTJUdyli3lNBbYdyXVPAmo-wrGUSdbSw7JvDs",
+    logo: "interac_corp_logo.jpg",
   },
 ];

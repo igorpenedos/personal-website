@@ -18,7 +18,7 @@ export const Experience = (props: Props) => {
     <div className="relative text-xl mt-6 flex flex-col overflow-hidden pl-12">
       <div className="absolute left-0">
         <img
-          src={logo}
+          src={`assets/${logo}`}
           alt={`logo of ${company}`}
           className="w-[40px] h-[40px] rounded-full drop-shadow"
         />
@@ -40,7 +40,6 @@ export const Experience = (props: Props) => {
             setOpen(!open);
           }}
         >
-          
           Click for {open ? "less" : "more"} info
         </div>
       </div>

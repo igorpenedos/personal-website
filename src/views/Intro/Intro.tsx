@@ -9,7 +9,9 @@ export const Intro = () => {
   return (
     <div className="mt-[132px] md:mt-32 flex flex-col" id="about">
       <div className="text-6xl md:text-7xl w-100 text-center font-semibold">
-        <div className="drop-shadow-lg">Igor Goncalves Penedos</div>
+        <div className="drop-shadow-lg">
+          Igor <span className="text-quaternary">Goncalves Penedos</span>
+        </div>
       </div>
       <div className="flex flex-col text-center md:text-start mt-12 md:mt-24 text-xl font-semibold">
         <div>Software Developer</div>
