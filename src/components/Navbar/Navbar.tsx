@@ -16,7 +16,7 @@ export const Navbar = (props: Props) => {
   return (
     <div>
       <div className="hidden md:flex sticky w-98 top-0 flex-row justify-center text-2xl gap-10 my-2 font-semibold">
-        <div className="absolute left-5 flex bg-primary rounded-xl">
+        <div className="absolute left-5 flex">
           <img
             src={"/assets/logo.svg"}
             alt="Logo"
