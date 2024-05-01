@@ -10,16 +10,30 @@ export const Experiences = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setAnimate(entry.isIntersecting);
+        if (entry.isIntersecting && targetRef.current) {
+          setAnimate(entry.isIntersecting);
+          observer.unobserve(targetRef.current);
+        }
       },
       { threshold: 0.1 }
     );
-    observer.observe(targetRef.current!);
+
+    const currentRef = targetRef.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
   }, []);
 
   return (
     <div className="mt-12 overflow-hidden" id="experiences" ref={targetRef}>
-      <Title text="Professional Journey" />
+      <Title text="Experiences" />
       <div
         className={`relative duration-1000 ${
           animate ? "scale-100 opacity-100" : " scale-50 opacity-0"

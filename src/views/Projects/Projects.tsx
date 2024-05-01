@@ -10,11 +10,25 @@ export const Projects = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setAnimate(entry.isIntersecting);
+        if (entry.isIntersecting && targetRef.current) {
+          setAnimate(entry.isIntersecting);
+          observer.unobserve(targetRef.current);
+        }
       },
       { threshold: 0.1 }
     );
-    observer.observe(targetRef.current!);
+
+    const currentRef = targetRef.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
   }, []);
 
   return (
