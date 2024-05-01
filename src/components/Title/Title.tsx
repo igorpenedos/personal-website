@@ -1,6 +1,6 @@
 import React from "react";
 import { MdOutlineWork } from "react-icons/md";
-import { FaGraduationCap, FaTools } from "react-icons/fa";
+import { FaBookmark, FaTools } from "react-icons/fa";
 
 interface Props {
   text: string;
@@ -16,7 +16,7 @@ export const Title = (props: Props) => {
         {(() => {
           switch (text) {
             case "Projects":
-              return <FaGraduationCap />;
+              return <FaBookmark />;
             case "Experiences":
               return <MdOutlineWork />;
             case "Skills":
